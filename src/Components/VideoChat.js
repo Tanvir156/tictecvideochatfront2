@@ -12,7 +12,7 @@ import "./ChatPage.css";
 const socket = io.connect("https://video-chat-tictectoe.onrender.com");
 function VideoChat() {
   const [me, setMe] = useState("");
-  const [stream, setStream] = useState();
+  const [stream, setStream] = useState(null);
   const [receivingCall, setReceivingCall] = useState(false);
   const [caller, setCaller] = useState("");
   const [callerSignal, setCallerSignal] = useState();
