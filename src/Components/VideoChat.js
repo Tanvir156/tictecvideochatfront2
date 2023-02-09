@@ -9,7 +9,7 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 import "./App.css";
 import "./ChatPage.css";
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("https://video-chat-tictectoe.onrender.com");
 function VideoChat() {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();
@@ -61,7 +61,7 @@ function VideoChat() {
       checkForWinner(newTicTacToe);
       setTurn(turn === "X" ? "O" : "X");
     });
-  }, []);
+  }, [stream]);
 
   const callUser = (id) => {
     const peer = new Peer({
