@@ -61,7 +61,7 @@ function VideoChat() {
       checkForWinner(newTicTacToe);
       setTurn(turn === "X" ? "O" : "X");
     });
-  }, [stream]);
+  }, []);
 
   const callUser = (id) => {
     const peer = new Peer({
