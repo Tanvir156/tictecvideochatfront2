@@ -9,7 +9,7 @@ import Peer from "simple-peer";
 import io from "socket.io-client";
 import "./App.css";
 import "./ChatPage.css";
-const socket = io.connect("https://video-chat-tictectoe.onrender.com");
+const socket = io.connect("https://tictecvideochat2-nwhx.onrender.com");
 function VideoChat() {
   const [me, setMe] = useState("");
   const [stream, setStream] = useState();
